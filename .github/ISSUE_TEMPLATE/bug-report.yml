@@ -1,0 +1,81 @@
+name: Bug report / 问题反馈
+description: Report a problem with AstrBot Cloud / 反馈 AstrBot Cloud 使用过程中遇到的问题
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢你的反馈！请尽量完整地填写以下信息，方便我们复现和处理问题。
+
+        Thank you for your feedback! Please provide as much detail as possible so we can reproduce and resolve the problem.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 问题概述 / Summary
+      description: 请用一句话描述遇到的问题。 / Describe the problem in one sentence.
+      placeholder: |
+        例如：发布插件时点击“解析”后一直没有响应。
+        Example: Parsing never finishes after clicking “Parse” while publishing a plugin.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤 / Steps to reproduce
+      description: 请列出能够稳定复现问题的步骤。 / List the steps that reliably reproduce the problem.
+      placeholder: |
+        1. 打开…… / Open …
+        2. 点击…… / Click …
+        3. 看到…… / Observe …
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望行为 / Expected behavior
+      description: 你原本期望发生什么？ / What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为 / Actual behavior
+      description: 实际发生了什么？如有错误信息请完整粘贴。 / What actually happened? Include the full error message if available.
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: 相关页面或资源链接 / Related URL
+      description: 如果问题与某个页面、插件或仓库有关，请提供链接。 / Share the relevant page, plugin, or repository URL if applicable.
+      placeholder: https://cloud.astrbot.app/…
+
+  - type: input
+    id: version
+    attributes:
+      label: AstrBot Cloud 版本或环境 / Version or environment
+      description: 请填写页面显示的版本、浏览器和操作系统。 / Include the displayed version, browser, and operating system.
+      placeholder: vX.Y.Z · Chrome 140 · macOS 15
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志、截图或其他上下文 / Logs, screenshots, or context
+      description: 可拖拽上传截图，也可以粘贴日志（请先移除敏感信息）。 / Drag in screenshots or paste logs (remove sensitive information first).
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认 / Checklist
+      options:
+        - label: 我已搜索现有 issue，确认没有重复反馈。 / I searched existing issues and found no duplicate.
+          required: true
+        - label: 我已移除反馈中的密码、Token、Cookie 等敏感信息。 / I removed passwords, tokens, cookies, and other sensitive information.
+          required: true
